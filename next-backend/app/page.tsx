@@ -36,20 +36,22 @@
 
 import axios from "axios"
 
-async function userDetails(){
-  const res = await axios.get("https://week-13-offline.kirattechnologies.workers.dev/api/v1/user/details");
-  return res.data
-}
+// async function userDetails(){
+//   const res = await axios.get("http://localhost:3000/api/user");
+//   return res.data
+// }
 
 //async component (we can't write async component in react this feauture introduced recently (I think after next js 14))
 
 export default async function Home(){
   await new Promise((r)=>setTimeout(r,5000)) //timeout in js
 
-  const kiratDetails = await userDetails();
+  // const kiratDetails = await userDetails();
 
   return <div>
-      {kiratDetails.name} , 
-      {kiratDetails.email}
+      {/* {kiratDetails.name}, 
+      {kiratDetails.email} */}
+
+      Hello bro
   </div>
 }
